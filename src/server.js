@@ -10,10 +10,11 @@ const __filename = fileURLToPath(import.meta.url)
 // Get the directory name from the file path
 const __dirname = dirname(__filename)
 
+// Middleware 
+app.use(express.json())
 // Serves the HTML file from the /public dir 
 // Tells express to serve all files from the public folder as static asset files 
 //  Any Request to the css file will be resolved to the public dir
-
 app.use(express.static(path.join(__dirname,'../public')))
 
 
